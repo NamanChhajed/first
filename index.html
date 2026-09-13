@@ -17,19 +17,18 @@
 <meta name="description" content="Chhajed & Panwar Chartered Accountants — Empowering Businesses with Trusted Financial Expertise. Tax, Audit, GST, Accounting & Advisory services.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy-deep:#0a2342;
-    --navy:#0f2e54;
-    --navy-light:#1c4170;
-    --gold:#c9a227;
-    --gold-soft:#e3c869;
-    --cream:#f7f3ea;
-    --paper:#fffdf8;
-    --ink:#1c1f26;
-    --ink-soft:#4a5160;
-    --line:rgba(10,35,66,0.12);
+    --maroon-deep:#3f1010;
+    --maroon:#661a1a;
+    --maroon-mid:#8a2a26;
+    --maroon-soft:#c98f7a;
+    --cream:#f4ead9;
+    --paper:#fffaf2;
+    --ink:#241414;
+    --ink-soft:#5c4a46;
+    --line:rgba(102,26,26,0.16);
     --max:1180px;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -46,312 +45,268 @@
   ul{list-style:none;}
 
   h1,h2,h3,h4{
-    font-family:'Source Serif 4', serif;
+    font-family:'Cormorant Garamond', serif;
     font-weight:600;
-    color:var(--navy-deep);
-    line-height:1.15;
-  }
-
-  .eyebrow{
-    font-family:'Inter', sans-serif;
-    font-size:0.74rem;
-    font-weight:700;
-    letter-spacing:0.22em;
-    text-transform:uppercase;
-    color:var(--gold);
+    color:var(--maroon-deep);
+    line-height:1.1;
   }
 
   .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
 
-  /* ledger double-rule signature */
-  .ledger-rule{
-    width:64px;
-    height:0;
-    border-top:2px solid var(--gold);
-    border-bottom:1px solid var(--gold);
-    margin-top:8px;
+  /* signature divider echoing the letterspaced logo mark */
+  .signature-rule{
+    display:flex; align-items:center; gap:10px;
+    margin-top:10px;
   }
-  .ledger-rule.center{margin-left:auto; margin-right:auto;}
-  .ledger-rule.light{border-top-color:rgba(255,255,255,0.85); border-bottom-color:rgba(255,255,255,0.5);}
+  .signature-rule span{
+    display:block; width:40px; height:2px; background:var(--maroon);
+  }
+  .signature-rule.light span{background:rgba(244,234,217,0.7);}
+  .signature-rule.center{justify-content:center;}
 
   /* ---------- Header ---------- */
   header{
     position:sticky; top:0; z-index:100;
-    background:rgba(10,35,66,0.97);
-    backdrop-filter:blur(6px);
-    border-bottom:1px solid rgba(201,162,39,0.25);
+    background:var(--maroon-deep);
+    border-bottom:1px solid rgba(244,234,217,0.15);
   }
   .nav{
     display:flex; align-items:center; justify-content:space-between;
-    padding:14px 28px;
+    padding:12px 28px;
     max-width:var(--max); margin:0 auto;
   }
   .brand{display:flex; align-items:center; gap:12px;}
-  .brand img{height:46px; width:auto; border-radius:2px;}
-  .nav-links{display:flex; align-items:center; gap:30px;}
+  .brand img{height:48px; width:auto; border-radius:2px;}
+  .nav-links{display:flex; align-items:center; gap:32px;}
   .nav-links a{
-    font-size:0.78rem;
+    font-size:0.82rem;
     font-weight:600;
-    letter-spacing:0.12em;
-    text-transform:uppercase;
-    color:#e8edf5;
+    letter-spacing:0.04em;
+    color:var(--cream);
     padding:6px 2px;
     border-bottom:2px solid transparent;
     transition:border-color .2s, color .2s;
   }
-  .nav-links a:hover{color:var(--gold-soft); border-color:var(--gold);}
+  .nav-links a:hover{color:#fff; border-color:var(--maroon-soft);}
   .nav-cta{
-    background:var(--gold);
-    color:var(--navy-deep) !important;
-    padding:10px 20px;
-    font-size:0.76rem;
+    background:var(--cream);
+    color:var(--maroon-deep) !important;
+    padding:10px 22px;
+    font-size:0.8rem;
     font-weight:700;
-    letter-spacing:0.1em;
     border-radius:2px;
     border-bottom:none !important;
   }
-  .nav-cta:hover{background:var(--gold-soft);}
+  .nav-cta:hover{background:#fff;}
   .menu-toggle{
     display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:6px;
   }
-  .menu-toggle span{width:24px; height:2px; background:#e8edf5;}
+  .menu-toggle span{width:24px; height:2px; background:var(--cream);}
 
   /* ---------- Hero ---------- */
   .hero{
-    background:
-      radial-gradient(ellipse at 80% -10%, rgba(201,162,39,0.18), transparent 55%),
-      linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 100%);
+    background:var(--maroon-deep);
     color:#fff;
     position:relative;
     overflow:hidden;
-    padding:96px 0 0;
-  }
-  .hero-ledger-bg{
-    position:absolute; inset:0; pointer-events:none; opacity:0.06;
-    background-image: repeating-linear-gradient(to bottom, #fff 0, #fff 1px, transparent 1px, transparent 64px);
   }
   .hero-inner{
-    display:grid; grid-template-columns:1.15fr 0.85fr; gap:48px; align-items:center;
-    max-width:var(--max); margin:0 auto; padding:64px 28px 80px;
+    max-width:820px; margin:0 auto; padding:110px 28px 96px;
     position:relative; z-index:1;
+    text-align:center;
+  }
+  .hero-kicker{
+    font-family:'Inter', sans-serif;
+    font-size:0.82rem;
+    font-weight:600;
+    letter-spacing:0.14em;
+    color:var(--cream);
+    opacity:0.85;
   }
   .hero h1{
     color:#fff;
-    font-size:clamp(2.1rem, 4vw, 3.2rem);
-    margin-top:14px;
-    max-width:14ch;
+    font-size:clamp(2.3rem, 5vw, 3.6rem);
+    margin-top:18px;
   }
   .hero p{
-    margin-top:20px; max-width:46ch;
-    color:#cdd7e6; font-size:1.05rem;
+    margin:22px auto 0; max-width:52ch;
+    color:#e9d9cd; font-size:1.08rem;
   }
-  .hero-ctas{display:flex; gap:14px; margin-top:34px; flex-wrap:wrap;}
+  .hero-ctas{display:flex; gap:14px; margin-top:36px; flex-wrap:wrap; justify-content:center;}
   .btn{
     display:inline-block;
-    padding:13px 26px;
-    font-size:0.8rem;
+    padding:14px 28px;
+    font-size:0.84rem;
     font-weight:700;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
     border-radius:2px;
-    transition:transform .15s, background .2s, color .2s;
+    transition:transform .15s, background .2s, color .2s, border-color .2s;
   }
   .btn:hover{transform:translateY(-2px);}
-  .btn-gold{background:var(--gold); color:var(--navy-deep);}
-  .btn-gold:hover{background:var(--gold-soft);}
+  .btn-solid{background:var(--cream); color:var(--maroon-deep);}
+  .btn-solid:hover{background:#fff;}
   .btn-outline{border:1px solid rgba(255,255,255,0.5); color:#fff;}
-  .btn-outline:hover{border-color:var(--gold); color:var(--gold-soft);}
+  .btn-outline:hover{border-color:var(--cream); color:var(--cream);}
 
-  .ledger-card{
-    background:var(--paper);
-    color:var(--ink);
-    border-radius:4px;
-    padding:30px 28px;
-    box-shadow:0 24px 60px -20px rgba(0,0,0,0.45);
-    border-top:4px solid var(--gold);
+  .hero-figures{
+    display:flex; justify-content:center; gap:0;
+    margin-top:64px; border-top:1px solid rgba(255,255,255,0.15);
   }
-  .ledger-card .row{
-    display:flex; justify-content:space-between; align-items:baseline;
-    padding:13px 0; border-bottom:1px dashed var(--line);
+  .hero-figures .fig{
+    flex:1; max-width:220px; padding:26px 12px 0; text-align:center;
+    border-right:1px solid rgba(255,255,255,0.15);
   }
-  .ledger-card .row:last-child{border-bottom:none;}
-  .ledger-card .label{font-size:0.82rem; color:var(--ink-soft);}
-  .ledger-card .value{font-family:'Source Serif 4', serif; font-size:1.5rem; font-weight:700; color:var(--navy-deep);}
-  .ledger-card .total{
-    margin-top:10px; padding-top:14px;
-    border-top:2px solid var(--navy-deep);
-    display:flex; justify-content:space-between; align-items:baseline;
-  }
-  .ledger-card .total .label{font-weight:700; color:var(--navy-deep); letter-spacing:0.06em; text-transform:uppercase; font-size:0.74rem;}
-  .ledger-card .total .value{color:var(--gold); font-size:1.1rem;}
+  .hero-figures .fig:last-child{border-right:none;}
+  .hero-figures .num{font-family:'Cormorant Garamond', serif; font-size:2.2rem; font-weight:700; color:#fff;}
+  .hero-figures .lbl{margin-top:4px; font-size:0.78rem; color:#d8c3b6;}
 
   /* ---------- Sections ---------- */
-  section{padding:90px 0;}
-  .section-head{max-width:640px; margin-bottom:48px;}
-  .section-head h2{font-size:clamp(1.7rem, 3vw, 2.3rem); margin-top:10px;}
-  .section-head p{margin-top:14px; color:var(--ink-soft); font-size:1.02rem;}
+  section{padding:96px 0;}
+  .section-head{max-width:640px; margin-bottom:52px;}
+  .section-head .tag{font-size:0.8rem; font-weight:700; color:var(--maroon); letter-spacing:0.03em;}
+  .section-head h2{font-size:clamp(1.8rem, 3.2vw, 2.5rem); margin-top:8px;}
+  .section-head p{margin-top:16px; color:var(--ink-soft); font-size:1.02rem;}
   .alt{background:var(--cream);}
 
   /* About */
-  .about-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:60px; align-items:center;}
+  .about-grid{display:grid; grid-template-columns:0.85fr 1.15fr; gap:64px; align-items:center;}
   .about-figure{
-    background:var(--navy-deep);
+    background:var(--maroon-deep);
     aspect-ratio:4/5;
     border-radius:4px;
     position:relative;
     overflow:hidden;
     display:flex; align-items:center; justify-content:center;
+    border:1px solid var(--maroon);
   }
   .about-figure::before{
     content:"";
-    position:absolute; inset:0;
-    background:
-      radial-gradient(circle at 30% 20%, rgba(201,162,39,0.35), transparent 45%),
-      repeating-linear-gradient(135deg, rgba(255,255,255,0.04) 0 2px, transparent 2px 18px);
+    position:absolute; inset:14px;
+    border:1px solid rgba(244,234,217,0.35);
   }
   .about-figure .mark{
     position:relative; z-index:1;
-    font-family:'Source Serif 4', serif;
-    color:var(--gold-soft);
-    font-size:5rem;
-    letter-spacing:0.03em;
+    font-family:'Cormorant Garamond', serif;
+    color:var(--cream);
+    font-size:4.6rem;
+    font-weight:600;
+    letter-spacing:0.05em;
   }
   .about-stats{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:38px;}
-  .stat{border-left:2px solid var(--gold); padding-left:14px;}
-  .stat .num{font-family:'Source Serif 4', serif; font-size:1.9rem; color:var(--navy-deep); font-weight:700;}
-  .stat .lbl{font-size:0.78rem; color:var(--ink-soft); letter-spacing:0.03em;}
+  .stat{border-left:2px solid var(--maroon); padding-left:14px;}
+  .stat .num{font-family:'Cormorant Garamond', serif; font-size:2rem; color:var(--maroon-deep); font-weight:700;}
+  .stat .lbl{font-size:0.78rem; color:var(--ink-soft);}
 
-  .about-list{margin-top:24px; display:grid; gap:12px;}
+  .about-list{margin-top:24px; display:grid; gap:14px;}
   .about-list li{display:flex; gap:12px; align-items:flex-start; color:var(--ink-soft);}
   .about-list .tick{
     flex:none; width:20px; height:20px; border-radius:50%;
-    background:var(--navy-deep); color:var(--gold);
+    background:var(--maroon-deep); color:var(--cream);
     display:flex; align-items:center; justify-content:center;
     font-size:0.7rem; margin-top:2px;
   }
 
   /* Services */
-  .services-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .services-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
   .service-card{
     background:var(--paper);
-    border:1px solid var(--line);
-    border-radius:4px;
-    padding:30px 26px;
-    transition:transform .2s, box-shadow .2s, border-color .2s;
+    padding:36px 30px;
   }
-  .service-card:hover{transform:translateY(-4px); box-shadow:0 20px 40px -24px rgba(10,35,66,0.35); border-color:var(--gold);}
-  .service-num{font-family:'Source Serif 4', serif; color:var(--gold); font-size:0.95rem; font-weight:700;}
-  .service-card h3{font-size:1.18rem; margin-top:10px;}
-  .service-card p{margin-top:10px; color:var(--ink-soft); font-size:0.94rem;}
+  .service-card h3{font-size:1.3rem; margin-top:14px;}
+  .service-card p{margin-top:12px; color:var(--ink-soft); font-size:0.95rem;}
+  .service-mark{
+    width:38px; height:38px; border:1px solid var(--maroon); border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Cormorant Garamond', serif; color:var(--maroon); font-weight:700;
+  }
 
   /* Industries */
-  .industries-grid{display:grid; grid-template-columns:repeat(6,1fr); gap:14px;}
-  .industry-chip{
-    background:var(--navy-deep);
-    color:#e8edf5;
-    border-radius:4px;
-    padding:24px 14px;
-    text-align:center;
-    font-size:0.85rem;
-    font-weight:600;
-    letter-spacing:0.02em;
-    border-bottom:3px solid var(--gold);
-    transition:background .2s;
+  .industries-list{
+    display:flex; flex-wrap:wrap; gap:12px;
   }
-  .industry-chip:hover{background:var(--navy-light);}
+  .industry-chip{
+    background:var(--paper);
+    color:var(--maroon-deep);
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:11px 20px;
+    font-size:0.88rem;
+    font-weight:600;
+    transition:background .2s, color .2s, border-color .2s;
+  }
+  .industry-chip:hover{background:var(--maroon-deep); color:var(--cream); border-color:var(--maroon-deep);}
 
   /* Team */
-  .team-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:30px;}
+  .team-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
   .team-card{
     background:var(--paper);
-    border:1px solid var(--line);
-    border-radius:4px;
-    overflow:hidden;
+    display:grid; grid-template-columns:auto 1fr; gap:22px;
+    padding:32px;
+    align-items:start;
   }
   .team-photo{
-    background:var(--navy-deep);
-    aspect-ratio:16/10;
+    width:84px; height:84px; border-radius:50%;
+    background:var(--maroon-deep);
     display:flex; align-items:center; justify-content:center;
-    position:relative;
-  }
-  .team-photo::before{
-    content:"";
-    position:absolute; inset:0;
-    background:radial-gradient(circle at 70% 30%, rgba(201,162,39,0.3), transparent 50%);
+    flex:none;
   }
   .team-photo .initials{
-    position:relative; z-index:1;
-    font-family:'Source Serif 4', serif;
-    font-size:2.6rem; font-weight:700; color:var(--gold-soft);
-    border:2px solid var(--gold-soft);
-    width:88px; height:88px;
-    border-radius:50%;
-    display:flex; align-items:center; justify-content:center;
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.7rem; font-weight:700; color:var(--cream);
   }
-  .team-body{padding:24px 26px;}
-  .team-body h3{font-size:1.2rem;}
-  .team-role{color:var(--gold); font-size:0.78rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; margin-top:4px;}
-  .team-body p{margin-top:12px; color:var(--ink-soft); font-size:0.92rem;}
+  .team-body h3{font-size:1.25rem;}
+  .team-role{color:var(--maroon); font-size:0.8rem; font-weight:700; letter-spacing:0.03em; margin-top:4px;}
+  .team-body p{margin-top:12px; color:var(--ink-soft); font-size:0.93rem;}
 
   /* Contact */
-  .contact-grid{display:grid; grid-template-columns:1fr 1.1fr; gap:50px;}
-  .contact-info-card{
-    background:var(--navy-deep); color:#fff;
-    border-radius:4px; padding:38px 32px;
+  .contact-wrap{
+    display:grid; grid-template-columns:1fr 1fr; gap:1px;
+    background:var(--maroon); border-radius:6px; overflow:hidden;
   }
-  .contact-info-card h3{color:#fff; font-size:1.25rem; margin-bottom:22px;}
-  .contact-item{display:flex; gap:14px; padding:16px 0; border-bottom:1px solid rgba(255,255,255,0.12); align-items:flex-start;}
+  .contact-panel{
+    background:var(--maroon-deep); color:#fff;
+    padding:44px 40px;
+  }
+  .contact-panel h3{color:#fff; font-size:1.4rem;}
+  .contact-panel > p{margin-top:10px; color:#e0cabc; font-size:0.96rem; max-width:38ch;}
+  .contact-item{display:flex; gap:16px; padding:18px 0; border-bottom:1px solid rgba(255,255,255,0.14);}
+  .contact-item:first-of-type{margin-top:26px;}
   .contact-item:last-child{border-bottom:none;}
   .contact-item .ico{
     width:34px; height:34px; flex:none; border-radius:50%;
-    background:rgba(201,162,39,0.18); color:var(--gold-soft);
+    background:rgba(244,234,217,0.14); color:var(--cream);
     display:flex; align-items:center; justify-content:center; font-size:0.95rem;
   }
-  .contact-item .t{font-size:0.74rem; letter-spacing:0.08em; text-transform:uppercase; color:#9fb0c8;}
-  .contact-item .d{margin-top:3px; color:#e8edf5; font-size:0.95rem;}
-
-  form{display:grid; gap:16px;}
-  .form-row{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
-  label{font-size:0.76rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:6px; display:block;}
-  input, textarea, select{
-    width:100%;
-    padding:13px 14px;
-    border:1px solid var(--line);
-    border-radius:3px;
-    font-family:'Inter', sans-serif;
-    font-size:0.95rem;
+  .contact-item .t{font-size:0.74rem; letter-spacing:0.04em; color:#c7ab9c;}
+  .contact-item .d{margin-top:3px; color:#f4ead9; font-size:0.96rem;}
+  .contact-cta{
     background:var(--paper);
-    color:var(--ink);
+    padding:44px 40px;
+    display:flex; flex-direction:column; justify-content:center;
   }
-  input:focus, textarea:focus, select:focus{
-    outline:none; border-color:var(--gold);
-    box-shadow:0 0 0 3px rgba(201,162,39,0.18);
-  }
-  textarea{resize:vertical; min-height:120px;}
-  .form-submit{
-    background:var(--navy-deep); color:#fff; border:none; cursor:pointer;
-    padding:15px 28px; font-size:0.82rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;
-    border-radius:3px; transition:background .2s; justify-self:start;
-  }
-  .form-submit:hover{background:var(--navy-light);}
-  .form-note{font-size:0.82rem; color:var(--ink-soft); margin-top:-4px;}
+  .contact-cta h3{font-size:1.4rem;}
+  .contact-cta p{margin-top:12px; color:var(--ink-soft); font-size:0.98rem;}
+  .contact-cta .btn-row{margin-top:26px; display:flex; gap:14px; flex-wrap:wrap;}
+  .btn-maroon{background:var(--maroon-deep); color:#fff;}
+  .btn-maroon:hover{background:var(--maroon);}
+  .btn-line{border:1px solid var(--maroon); color:var(--maroon-deep);}
+  .btn-line:hover{background:var(--maroon-deep); color:#fff; border-color:var(--maroon-deep);}
 
   /* Footer */
   footer{
-    background:var(--navy-deep); color:#cdd7e6;
-    padding:54px 0 26px;
+    background:var(--maroon-deep); color:#e0cabc;
+    padding:56px 0 26px;
   }
   .footer-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px;}
-  .footer-brand img{height:42px; margin-bottom:14px; border-radius:2px;}
-  .footer-brand p{color:#9fb0c8; font-size:0.9rem; max-width:34ch;}
-  footer h4{color:#fff; font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:16px;}
+  .footer-brand img{height:44px; margin-bottom:14px; border-radius:2px;}
+  .footer-brand p{color:#c7ab9c; font-size:0.9rem; max-width:34ch;}
+  footer h4{color:#fff; font-size:0.82rem; letter-spacing:0.04em; margin-bottom:16px; font-family:'Inter',sans-serif; font-weight:700;}
   footer ul li{margin-bottom:10px;}
-  footer ul a{color:#b9c5d8; font-size:0.92rem; transition:color .2s;}
-  footer ul a:hover{color:var(--gold-soft);}
+  footer ul a{color:#dcc3b5; font-size:0.92rem; transition:color .2s;}
+  footer ul a:hover{color:#fff;}
   .footer-bottom{
-    margin-top:44px; padding-top:22px; border-top:1px solid rgba(255,255,255,0.1);
+    margin-top:44px; padding-top:22px; border-top:1px solid rgba(255,255,255,0.12);
     display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
-    font-size:0.8rem; color:#8294ad;
+    font-size:0.8rem; color:#b89584;
   }
 
   /* Reduced motion */
@@ -361,38 +316,38 @@
   }
 
   /* Focus visibility */
-  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
-    outline:2px solid var(--gold); outline-offset:2px;
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--maroon-soft); outline-offset:2px;
   }
 
   /* ---------- Responsive ---------- */
   @media (max-width: 980px){
-    .hero-inner{grid-template-columns:1fr;}
     .about-grid{grid-template-columns:1fr;}
-    .about-figure{max-width:380px; margin:0 auto;}
-    .services-grid{grid-template-columns:repeat(2,1fr);}
-    .industries-grid{grid-template-columns:repeat(3,1fr);}
-    .team-grid{grid-template-columns:1fr; max-width:480px; margin:0 auto;}
-    .contact-grid{grid-template-columns:1fr;}
+    .about-figure{width:200px; margin:auto auto;}
+    .services-grid{grid-template-columns:1fr 1fr;}
+    .team-grid{grid-template-columns:1fr;}
+    .contact-wrap{grid-template-columns:1fr;}
+    .hero-figures{flex-wrap:wrap;}
+    .hero-figures .fig{min-width:33%; border-bottom:1px solid rgba(255,255,255,0.15); padding-bottom:18px;}
   }
   @media (max-width: 720px){
     .nav-links{
-      position:fixed; top:74px; left:0; right:0;
-      background:var(--navy-deep);
+      position:fixed; top:72px; left:0; right:0;
+      background:var(--maroon-deep);
       flex-direction:column; align-items:flex-start;
       padding:20px 28px 28px; gap:18px;
-      border-bottom:1px solid rgba(201,162,39,0.25);
+      border-bottom:1px solid rgba(244,234,217,0.15);
       transform:translateY(-12px); opacity:0; pointer-events:none;
       transition:transform .2s, opacity .2s;
     }
     .nav-links.open{transform:translateY(0); opacity:1; pointer-events:auto;}
     .menu-toggle{display:flex;}
-    .nav-cta{margin-top:4px;}
     .services-grid{grid-template-columns:1fr;}
-    .industries-grid{grid-template-columns:repeat(2,1fr);}
-    .form-row{grid-template-columns:1fr;}
+    .team-card{grid-template-columns:1fr; text-align:left;}
     .footer-grid{grid-template-columns:1fr; gap:30px;}
+    .hero-inner{padding:80px 24px 64px;}
     section{padding:64px 0;}
+    .contact-panel, .contact-cta{padding:34px 26px;}
   }
 </style>
 </head>
@@ -418,8 +373,7 @@
       <li><a href="#services">Services</a></li>
       <li><a href="#industries">Industries</a></li>
       <li><a href="#team">Team</a></li>
-      <li><a href="#contact">Contact</a></li>
-      
+      <li><a href="#contact" >Contact</a></li>
     </ul>
     <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -428,23 +382,18 @@
 </header>
 
 <section class="hero" id="home">
-  <div class="hero-ledger-bg"></div>
   <div class="hero-inner">
-    <div>
-      <p class="eyebrow">Chartered Accountants · Est. Trust</p>
-      <h1>Empowering Businesses with Trusted Financial Expertise</h1>
-      <p>Chhajed &amp; Panwar provides taxation, audit, GST and advisory services built on precision, integrity and a deep understanding of how your business actually runs.</p>
-      <div class="hero-ctas">
-        
-        <a href="#services" class="btn btn-outline">Our Services</a>
-      </div>
+    <p class="hero-kicker">Chartered Accountants</p>
+    <h1>Empowering Businesses with Trusted Financial Expertise</h1>
+    <p>Chhajed &amp; Panwar provides taxation, audit, GST and advisory services built on precision, integrity and a deep understanding of how your business actually runs.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn btn-solid">Get in Touch</a>
+      <a href="#services" class="btn btn-outline">Our Services</a>
     </div>
-    <div class="ledger-card">
-      <p class="eyebrow" style="color:var(--navy-deep); opacity:0.6;">Why Clients Choose Us</p>
-      <div class="row"><span class="label">Years in Practice</span><span class="value">9+</span></div>
-      <div class="row"><span class="label">Businesses Served</span><span class="value">50+</span></div>
-      <div class="row"><span class="label">Statutory Compliance Rate</span><span class="value">100%</span></div>
-      <div class="total"><span class="label">Client Trust</span><span class="value">Audited &amp; Verified</span></div>
+    <div class="hero-figures">
+      <div class="fig"><div class="num">9+</div><div class="lbl">Years in Practice</div></div>
+      <div class="fig"><div class="num">50+</div><div class="lbl">Businesses Served</div></div>
+      <div class="fig"><div class="num">100%</div><div class="lbl">Statutory Compliance Rate</div></div>
     </div>
   </div>
 </section>
@@ -453,9 +402,9 @@
   <div class="wrap about-grid">
     <div class="about-figure"><span class="mark">C&amp;P</span></div>
     <div>
-      <p class="eyebrow">Our Firm</p>
+      <p class="section-head" style="margin-bottom:0;"><span class="tag">Our Firm</span></p>
       <h2>Sound advice, kept simple</h2>
-      <div class="ledger-rule"></div>
+      <div class="signature-rule"><span></span></div>
       <p style="margin-top:18px; color:var(--ink-soft);">For over two decades, Chhajed &amp; Panwar has helped owners and finance teams stay compliant, stay informed, and make confident decisions. We combine technical depth with plain-language guidance — no jargon, no surprises at year-end.</p>
       <ul class="about-list">
         <li><span class="tick">✓</span><span>Dedicated partner-level attention on every engagement</span></li>
@@ -474,24 +423,24 @@
 <section id="services" class="alt">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">What We Do</p>
+      <span class="tag">What We Do</span>
       <h2>Services built around your business</h2>
       <p>From day-to-day bookkeeping to complex statutory audits, every engagement is handled with the same rigour and accountability.</p>
     </div>
     <div class="services-grid">
       <div class="service-card">
-        <div class="service-num">01</div>
+        <div class="service-mark">R</div>
         <h3>Risk Assurance</h3>
-        <p>Risk Assurance is a service that evaluates and strengthens an organization’s processes,
+        <p>Risk Assurance is a service that evaluates and strengthens an organization's processes,
                 controls, and systems to identify, manage, and reduce potential risks.</p>
       </div>
       <div class="service-card">
-        <div class="service-num">02</div>
+        <div class="service-mark">B</div>
         <h3>Business Advisory</h3>
         <p>Entity structuring, budgeting and growth-stage financial strategy for founders and management teams.</p>
       </div>
       <div class="service-card">
-        <div class="service-num">03</div>
+        <div class="service-mark">T</div>
         <h3>Tax</h3>
         <p>Tax services help individuals and businesses plan, manage, and comply with tax regulations
                 while minimizing liabilities.</p>
@@ -503,11 +452,11 @@
 <section id="industries">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">Sectors We Serve</p>
+      <span class="tag">Sectors We Serve</span>
       <h2>Industry experience that matters</h2>
       <p>Our advice is sharper because we understand how each sector actually operates.</p>
     </div>
-    <div class="industries-grid">
+    <div class="industries-list">
       <div class="industry-chip">Banking</div>
       <div class="industry-chip">Mining</div>
       <div class="industry-chip">Automobile</div>
@@ -534,13 +483,13 @@
 <section id="team" class="alt">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">Leadership</p>
+      <span class="tag">Leadership</span>
       <h2>Meet the Partners</h2>
       <p>Two partners, one standard — every client gets direct access to senior expertise.</p>
     </div>
     <div class="team-grid">
       <div class="team-card">
-        <div class="team-photo"><img src="Arihant_-removebg-preview.png" height="312px"></div>
+        <img src="Arihant_-removebg-preview.png" width="100px">
         <div class="team-body">
           <h3>CA. Arihant Chhajed</h3>
           <p class="team-role">Founding Partner</p>
@@ -548,7 +497,7 @@
         </div>
       </div>
       <div class="team-card">
-        <div class="team-photo"><img src="shubham-removebg-preview.png" height="312px"></div>
+        <img src="shubham-removebg-preview.png" width="130px">
         <div class="team-body">
           <h3>CA. Dixit Jain</h3>
           <p class="team-role">Founding Partner</p>
@@ -562,17 +511,17 @@
 <section id="contact">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">Get in Touch</p>
+      <span class="tag">Get in Touch</span>
       <h2>Let's talk about your finances</h2>
-      <p>Tell us a little about your business and we'll get back to you within one business day.</p>
+      <p>Reach out directly and we'll get back to you within one business day.</p>
     </div>
-    <div class="contact-grid">
-      <div class="contact-info-card">
+    <div class="contact-wrap">
+      <div class="contact-panel">
         <h3>Contact Details</h3>
+        <p>Direct, partner-level access whenever you need it.</p>
         <div class="contact-item">
           <div class="ico">⌂</div>
-          <div><div class="t">Office</div><div class="d"> 29, Mahaveer Udhyog Nagar Road,
-Pali 306401, Rajasthan, India</div></div>
+          <div><div class="t">Office</div><div class="d">29, Mahaveer Udhyog Nagar Road,<br>Pali 306401, Rajasthan, India</div></div>
         </div>
         <div class="contact-item">
           <div class="ico">☎</div>
@@ -580,47 +529,21 @@ Pali 306401, Rajasthan, India</div></div>
         </div>
         <div class="contact-item">
           <div class="ico">✉</div>
-          <div><div class="t">Email</div><div class="d">carihant@gmail.com</div></div>
+          <div><div class="t">Email</div><div class="d">cnppali@gmail.com</div></div>
         </div>
         <div class="contact-item">
           <div class="ico">◷</div>
-          <div><div class="t">Office Hours</div><div class="d">Mon – Sat, 10:00 AM – 7:00 PM</div></div>
+          <div><div class="t">Office Hours</div><div class="d">Mon – Sat, 10:00 AM – 8:00 PM</div></div>
         </div>
       </div>
-      <form id="contactForm">
-        <div class="form-row">
-          <div>
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          <div>
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" required>
-          </div>
+      <div class="contact-cta">
+        <h3>Ready when you are</h3>
+        <p>Call or email us directly — no forms to fill out. We typically respond the same business day.</p>
+        <div class="btn-row">
+          <a href="tel:+919462444523" class="btn btn-maroon">Call +91 9462444523</a>
+          <a href="mailto:cnppali@gmail.com" class="btn btn-line">Email Us</a>
         </div>
-        <div>
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div>
-          <label for="service">Service Required</label>
-          <select id="service" name="service">
-            <option>Tax Planning &amp; Filing</option>
-            <option>GST Compliance</option>
-            <option>Statutory &amp; Internal Audit</option>
-            <option>Accounting &amp; Bookkeeping</option>
-            <option>Business Advisory</option>
-            <option>Company Law &amp; ROC</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div>
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Briefly describe what you need help with..."></textarea>
-        </div>
-        <!-- <p class="form-note">This is a demo form — connect it to your email or CRM to start receiving enquiries.</p> -->
-        <button type="submit" class="form-submit">Send Enquiry</button>
-      </form>
+      </div>
     </div>
   </div>
 </section>
@@ -644,13 +567,12 @@ Pali 306401, Rajasthan, India</div></div>
       <h4>Get in Touch</h4>
       <ul>
         <li><a href="tel:+9462444523">+91 9462444523</a></li>
-        <li><a href="carihant@gmail.com">carihant@gmail.com</a></li>
+        <li><a href="mailto:carihant@gmail.com">cnppali@gmail.com</a></li>
       </ul>
     </div>
   </div>
   <div class="wrap footer-bottom">
     <span>© 2026 Chhajed &amp; Panwar, Chartered Accountants. All rights reserved.</span>
-    <span>Membership No. ICAI · FRN XXXXXXX</span>
   </div>
 </footer>
 
@@ -666,12 +588,6 @@ Pali 306401, Rajasthan, India</div></div>
       navLinks.classList.remove('open');
       menuToggle.setAttribute('aria-expanded', 'false');
     });
-  });
-
-  document.getElementById('contactForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    alert('Thank you — your enquiry has been noted. (Connect this form to an email service to go live.)');
-    this.reset();
   });
 </script>
 
